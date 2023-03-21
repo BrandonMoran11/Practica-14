@@ -16,8 +16,8 @@ app.get('/', function (req, res){
     res.render('index');
 });
 
-app.get('/person/:id', function(req, res){
-    res.render('person', {ID: req.params.id, Qstr: req.query.qstr});
+app.get('/person/:name', function(req, res){
+    res.render('person', {NAME: req.params.name, Msg: req.query.msg, Times: req.query.times});
 });
 
 

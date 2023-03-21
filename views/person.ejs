@@ -3,7 +3,38 @@
       <link rel="stylesheet" href="/assets/style.css" type="text/css"/>
     </head>
     <body> 
-        <h1>Person: <%= ID %></h1>
-        <h2>Query string value: <%= Qstr %></h2>
+        <h1>Person Name: <%= NAME %></h1>
+        <h2>Mensaje: <%= Msg %></h2>
+        <ul>
+            <% 
+                switch(Msg){
+                    case 'Hola': %>
+                        <% for (var i = 1; i <=Times; i++) { %>
+                            <li>
+                                <td><%= Msg + ' ' + NAME %></td>
+                            </li>
+                        <% } %>
+                    <% break;
+                    case 'Bienvenido': %>
+                        <% for (var i = 1; i <=Times; i++) { %>
+                            <li>
+                                <td><%= Msg + ' ' + NAME %></td>
+                            </li>
+                        <% } %>
+                    <% break;
+                        case 'Adios': %>
+                            <% for (var i = 1; i <=Times; i++) { %>
+                                <li>
+                                    <td><%= Msg + ' ' + NAME %></td>
+                                </li>
+                        <% } %>
+                    <%break;
+                    default: %>
+                            <h1> Error</h1>
+                <% } %>            
+        
+            
+        </ul>
+    
     </body>
 </html>
